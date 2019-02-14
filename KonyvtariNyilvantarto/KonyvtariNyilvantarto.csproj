@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C974FE32-90A9-4280-A43A-107DD29228A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KonyvtariNyilvantarto</RootNamespace>
+    <AssemblyName>KonyvtariNyilvantarto</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Zoli\Desktop\Új mappa %282%29\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>hu-HU</TargetCulture>
+    <ProductName>Könyvtári nyilvántartó2</ProductName>
+    <PublisherName>Zolika</PublisherName>
+    <SuiteName>Program</SuiteName>
+    <MinimumRequiredVersion>1.0.0.1</MinimumRequiredVersion>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>430320FACF4325FACC76816A78B42686A3161BF9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>KonyvtariNyilvantarto_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>rekeszek.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="allapotokDST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>allapotokDST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cbAllapotokDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cbAllapotokDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="felhasznalokDST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>felhasznalokDST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllapotokcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllapotokcs.Designer.cs">
+      <DependentUpon>frmAllapotokcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bejelentkezes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bejelentkezes.Designer.cs">
+      <DependentUpon>Bejelentkezes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKiadok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKiadok.Designer.cs">
+      <DependentUpon>frmKiadok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKolcsonzes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKolcsonzes.Designer.cs">
+      <DependentUpon>frmKolcsonzes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKolcsonzok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKolcsonzok.Designer.cs">
+      <DependentUpon>frmKolcsonzok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKonyvtarAblak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKonyvtarAblak.Designer.cs">
+      <DependentUpon>frmKonyvtarAblak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMufajok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMufajok.Designer.cs">
+      <DependentUpon>frmMufajok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelejtKonyvek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelejtKonyvek.Designer.cs">
+      <DependentUpon>frmSelejtKonyvek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMuveletek.cs" />
+    <Compile Include="kiadokDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kiadokDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KolcsonzesDST1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KolcsonzesDST1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="kolcsonzokDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kolcsonzokDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="konyvekDST.cs">
+      <DependentUpon>konyvekDST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="konyvekDST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>konyvekDST.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mufajokDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mufajokDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rendszergazda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rendszergazda.Designer.cs">
+      <DependentUpon>rendszergazda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelejtKonyvekDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelejtKonyvekDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SzerzokDST.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SzerzokDST.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bejelentkezes.resx">
+      <DependentUpon>Bejelentkezes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAllapotokcs.resx">
+      <DependentUpon>frmAllapotokcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKiadok.resx">
+      <DependentUpon>frmKiadok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKolcsonzes.resx">
+      <DependentUpon>frmKolcsonzes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKolcsonzok.resx">
+      <DependentUpon>frmKolcsonzok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKonyvtarAblak.resx">
+      <DependentUpon>frmKonyvtarAblak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMufajok.resx">
+      <DependentUpon>frmMufajok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelejtKonyvek.resx">
+      <DependentUpon>frmSelejtKonyvek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rendszergazda.resx">
+      <DependentUpon>rendszergazda.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="allapotokDST.xsc">
+      <DependentUpon>allapotokDST.xsd</DependentUpon>
+    </None>
+    <None Include="allapotokDST.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>allapotokDST.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="allapotokDST.xss">
+      <DependentUpon>allapotokDST.xsd</DependentUpon>
+    </None>
+    <None Include="cbAllapotokDS.xsc">
+      <DependentUpon>cbAllapotokDS.xsd</DependentUpon>
+    </None>
+    <None Include="cbAllapotokDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cbAllapotokDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cbAllapotokDS.xss">
+      <DependentUpon>cbAllapotokDS.xsd</DependentUpon>
+    </None>
+    <None Include="felhasznalokDST.xsc">
+      <DependentUpon>felhasznalokDST.xsd</DependentUpon>
+    </None>
+    <None Include="felhasznalokDST.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>felhasznalokDST.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="felhasznalokDST.xss">
+      <DependentUpon>felhasznalokDST.xsd</DependentUpon>
+    </None>
+    <None Include="kiadokDataSet.xsc">
+      <DependentUpon>kiadokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kiadokDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kiadokDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kiadokDataSet.xss">
+      <DependentUpon>kiadokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KolcsonzesDST1.xsc">
+      <DependentUpon>KolcsonzesDST1.xsd</DependentUpon>
+    </None>
+    <None Include="KolcsonzesDST1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KolcsonzesDST1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KolcsonzesDST1.xss">
+      <DependentUpon>KolcsonzesDST1.xsd</DependentUpon>
+    </None>
+    <None Include="kolcsonzokDataSet.xsc">
+      <DependentUpon>kolcsonzokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kolcsonzokDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kolcsonzokDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kolcsonzokDataSet.xss">
+      <DependentUpon>kolcsonzokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="konyvekDST.xsc">
+      <DependentUpon>konyvekDST.xsd</DependentUpon>
+    </None>
+    <None Include="konyvekDST.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>konyvekDST.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="konyvekDST.xss">
+      <DependentUpon>konyvekDST.xsd</DependentUpon>
+    </None>
+    <None Include="KonyvtariNyilvantarto_1_TemporaryKey.pfx" />
+    <None Include="KonyvtariNyilvantarto_TemporaryKey.pfx" />
+    <None Include="mufajokDataSet.xsc">
+      <DependentUpon>mufajokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mufajokDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mufajokDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mufajokDataSet.xss">
+      <DependentUpon>mufajokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SelejtKonyvekDataSet.xsc">
+      <DependentUpon>SelejtKonyvekDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SelejtKonyvekDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SelejtKonyvekDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SelejtKonyvekDataSet.xss">
+      <DependentUpon>SelejtKonyvekDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SzerzokDST.xsc">
+      <DependentUpon>SzerzokDST.xsd</DependentUpon>
+    </None>
+    <None Include="SzerzokDST.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SzerzokDST.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SzerzokDST.xss">
+      <DependentUpon>SzerzokDST.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Konyvtar.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Konyvtar_log.ldf">
+      <DependentUpon>Konyvtar.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rekeszek.ico" />
+    <None Include="Resources\Fekete-fehér\images %282%29.jpg" />
+    <None Include="Resources\Fekete-fehér\1502717-library-books-shelf-background.jpg" />
+    <None Include="Resources\Fekete-fehér\tumblr_oa5p6hCQ2A1sbssddo1_500-1.gif" />
+    <None Include="Resources\Fekete-fehér\pad030.jpg" />
+    <None Include="Resources\Fekete-fehér\images %283%29.jpg" />
+    <None Include="Resources\antik-konyvek-4.jpg" />
+    <None Include="Resources\teruleti-konyvtari-szolgaltatas.jpg" />
+    <None Include="Resources\678716_book-wallpaper-for-walls.jpg" />
+    <None Include="Resources\book-wall-3440x1440.jpg" />
+    <None Include="Resources\atl 2_0.JPG" />
+    <None Include="Resources\images %282%291.jpg" />
+    <None Include="Resources\images %282%29.jpg" />
+    <None Include="Resources\1nSqBalqfG_1.jpg" />
+    <None Include="Resources\eda64d74f2544fcc41a19b06d4e56792.jpg" />
+    <None Include="Resources\livraria-lello--irmao.jpg" />
+    <None Include="Resources\vez._0.JPG" />
+    <None Include="Resources\9d455e1a52d5f31c1c947adbeea48324.jpg" />
+    <None Include="Resources\ws_Forest_1366x768.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

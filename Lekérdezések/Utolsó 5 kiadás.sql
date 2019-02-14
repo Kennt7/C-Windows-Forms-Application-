@@ -1,0 +1,1 @@
+﻿SELECT top 5 * FROM Kolcsonzes ORDER BY KiadasDatuma
